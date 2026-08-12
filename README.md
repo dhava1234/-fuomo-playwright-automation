@@ -1,26 +1,37 @@
 # FUOMO Playwright Automation
 
-Automation testing untuk FUOMO staging (https://fe-stage.fuomo.id) menggunakan **Playwright + TypeScript + Page Object Model + GitHub Actions**.
+Automated end-to-end testing project for the FUOMO staging homepage using Playwright and TypeScript.
 
-## Setup
-npm ci
-npx playwright install
+## Tech Stack
 
-## Run Tests
-npm test              # headless (desktop + mobile)
-npm run test:headed   # browser terlihat
-npm run test:ui       # UI mode
+- Playwright
+- TypeScript
+- Node.js
+- GitHub Actions
+- Chromium
 
-## Report
-npm run report        # buka HTML report
+## Test Environment
 
-## Struktur
-- `tests/homepage.spec.ts` — Scenario 1 & 2 (page load + main UI)
-- `tests/navigation.spec.ts` — Scenario 3 (navigation)
-- `pages/HomePage.ts` — Page Object Model
+Default Base URL:
 
-## Environment Variable
-Lihat `.env.example`. Default: `BASE_URL=https://fe-stage.fuomo.id`
+https://fe-stage.fuomo.id
 
-## CI/CD
-Test berjalan otomatis via GitHub Actions (`.github/workflows/playwright.yml`) pada setiap push/PR, dengan retry, JUnit + HTML report, dan screenshot on-failure.
+The Base URL can be overridden using the `BASE_URL` environment variable.
+
+## Project Structure
+
+```text
+fuomo-playwright-automation/
+├── .github/
+│   └── workflows/
+│       └── playwright.yml
+├── pages/
+│   └── HomePage.ts
+├── tests/
+│   ├── homepage.spec.ts
+│   └── navigation.spec.ts
+├── playwright.config.ts
+├── tsconfig.json
+├── package.json
+├── .gitignore
+└── README.md

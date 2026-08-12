@@ -4,19 +4,15 @@ Automated end-to-end testing project for the FUOMO staging homepage using Playwr
 
 ## Tech Stack
 
-- Playwright
-- TypeScript
-- Node.js
-- GitHub Actions
-- Chromium
+- **Framework:** Playwright
+- **Language:** TypeScript
+- **Runtime:** Node.js
+- **CI/CD:** GitHub Actions
 
 ## Test Environment
 
-Default Base URL:
-
-https://fe-stage.fuomo.id
-
-The Base URL can be overridden using the `BASE_URL` environment variable.
+- **Default Base URL:** `https://fe-stage.fuomo.id`
+- The Base URL can be overridden using the `BASE_URL` environment variable.
 
 ## Project Structure
 
@@ -24,14 +20,16 @@ The Base URL can be overridden using the `BASE_URL` environment variable.
 fuomo-playwright-automation/
 ├── .github/
 │   └── workflows/
-│       └── playwright.yml
+│       └── playwright.yml       # GitHub Actions CI pipeline
 ├── pages/
-│   └── HomePage.ts
+│   └── HomePage.ts              # Page Object Model
 ├── tests/
-│   ├── homepage.spec.ts
-│   └── navigation.spec.ts
-├── playwright.config.ts
-├── tsconfig.json
-├── package.json
+│   ├── homepage.spec.ts         # Homepage test scenarios
+│   └── navigation.spec.ts       # Navigation test scenario
+├── playwright.config.ts         # Playwright configuration
+├── tsconfig.json                # TypeScript configuration
+├── package.json                 # Project dependencies and scripts
+├── package-lock.json
+├── .env.example                 # Environment variable example
 ├── .gitignore
 └── README.md

@@ -9,7 +9,7 @@ Automated end-to-end testing project for the FUOMO staging homepage using Playwr
 - **Runtime:** Node.js
 - **CI/CD:** GitHub Actions
 
-## Test Environment
+## Test Environments
 
 - **Default Base URL:** `https://fe-stage.fuomo.id`
 - The Base URL can be overridden using the `BASE_URL` environment variable.
